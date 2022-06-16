@@ -1,0 +1,18 @@
+//
+//  xDripOverride.xcconfig
+//  xdrip
+//
+//  Created by Zane Cahill on 30/05/2022.
+//  Copyright © 2022 Johan Degraeve. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+// Customize this to change the app name displayed
+MAIN_APP_DISPLAY_NAME = xDrip
+
+// Put your team id here for signing
+XDRIP_DEVELOPMENT_TEAM = Y8VNJQAZ78
+
+// Change to support running multiple apps simultaneously.
+MAIN_APP_BUNDLE_IDENTIFIER = io.cahill.$(DEVELOPMENT_TEAM).xdripswift
