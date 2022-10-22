@@ -1,0 +1,24 @@
+name: "Upstream Sync"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync_latest_from_upstream:
+    runs-on: ubuntu-latest
+    name: Sync latest commits from upstream repo
+    steps:
+      - name: Checkout target repo
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Sync upstream changes
+        id: sync
+        uses: imba-tjd/rebase-upstream-action@master
+        with:
+          upstream: JohanDegraeve/xdripswift
+          branch: master
